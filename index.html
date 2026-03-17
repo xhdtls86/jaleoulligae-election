@@ -1,80 +1,165 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>잘어울리개 반장선거</title>
-
-<style>
-body {
-  margin:0;
-  font-family: 'Arial';
-  background:#f8f3ea;
-  text-align:center;
-}
-
-h1 {
-  margin-top:30px;
-}
-
-.container {
-  max-width:800px;
-  margin:auto;
-}
-
-.card {
-  background:white;
-  margin:20px;
-  padding:20px;
-  border-radius:20px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
-
-img {
-  width:100%;
-  border-radius:15px;
-}
-
-.btn {
-  display:inline-block;
-  background:#d4a937;
-  color:white;
-  padding:15px 30px;
-  border-radius:30px;
-  text-decoration:none;
-  margin:30px;
-  font-weight:bold;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>잘어울리개 반장선거</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f3ea;
+      color: #2c241b;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+      text-align: center;
+    }
+    .hero {
+      background: linear-gradient(to bottom, #fff8ee, #f8f3ea);
+      padding: 36px 20px 24px;
+      border-radius: 24px;
+      margin-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid #eadcc2;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      line-height: 1.3;
+    }
+    .gold {
+      color: #b48a3a;
+    }
+    .sub {
+      margin: 16px auto 0;
+      max-width: 700px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #5b4c3a;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eadcc2;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: left;
+    }
+    .card img {
+      width: 100%;
+      display: block;
+      height: 320px;
+      object-fit: cover;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .chip {
+      display: inline-block;
+      background: #fff5df;
+      color: #9a742d;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 26px;
+    }
+    .card p {
+      margin: 0;
+      color: #5e503f;
+      line-height: 1.7;
+    }
+    .vote-box {
+      background: #fff;
+      border: 1px solid #eadcc2;
+      border-radius: 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 28px 20px;
+      margin-top: 28px;
+    }
+    .vote-btn {
+      display: inline-block;
+      margin-top: 18px;
+      background: #b48a3a;
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+    @media (min-width: 768px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="badge">🐾 잘어울리개 공식 반장 선거</div>
+      <h1>귀엽고, 특별한<br><span class="gold">잘어울리개 반장선거</span></h1>
+      <p class="sub">
+        출마한 친구들만 참여하는 특별한 투표입니다.
+        후보를 살펴보고, 가장 반장과 잘 어울리는 친구에게 한 표를 보내주세요 💛
+      </p>
+    </div>
 
-<h1>🐾 잘어울리개 반장선거 🐾</h1>
+    <div class="cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80" alt="후보 1" />
+        <div class="card-body">
+          <div class="chip">반장 후보 1</div>
+          <h2>후보 1</h2>
+          <p>친구들과 사이좋게 지내며 밝은 분위기를 만들게요 🐾</p>
+        </div>
+      </div>
 
-<div class="container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80" alt="후보 2" />
+        <div class="card-body">
+          <div class="chip">반장 후보 2</div>
+          <h2>후보 2</h2>
+          <p>차분하지만 든든하게 반장을 맡아볼게요 💛</p>
+        </div>
+      </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
-    <h2>후보 1</h2>
-    <p>친구들과 사이좋게 지낼게요 💛</p>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=900&q=80" alt="후보 3" />
+        <div class="card-body">
+          <div class="chip">반장 후보 3</div>
+          <h2>후보 3</h2>
+          <p>귀여움과 활발함으로 잘어울리개를 대표해볼게요 ✨</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="vote-box">
+      <h2>투표 안내</h2>
+      <p>출마한 친구들 보호자님만 온라인 투표에 참여하실 수 있습니다.</p>
+      <a href="#" class="vote-btn">지금 투표하기 🐾</a>
+    </div>
   </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
-    <h2>후보 2</h2>
-    <p>밝은 분위기를 만들겠습니다 ✨</p>
-  </div>
-
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8">
-    <h2>후보 3</h2>
-    <p>귀여움으로 대표하겠습니다 🐶</p>
-  </div>
-
-</div>
-
-<a href="여기에_투표링크" class="btn">투표하기 🐾</a>
-
 </body>
 </html>
