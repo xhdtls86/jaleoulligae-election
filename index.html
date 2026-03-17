@@ -1,203 +1,80 @@
-export default function JalEoulligaeElectionHomepage() {
-  const candidates = [
-    {
-      id: 1,
-      name: "후보 1",
-      promise: "친구들과 사이좋게 지내며 밝은 분위기를 만들게요 🐾",
-      charm: ["사교성 만점", "사진 잘 받는 타입", "에너지 넘침"],
-      image:
-        "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80",
-    },
-    {
-      id: 2,
-      name: "후보 2",
-      promise: "차분하지만 든든하게 반장을 맡아볼게요 💛",
-      charm: ["온순한 성격", "친구 배려왕", "매너 좋은 타입"],
-      image:
-        "https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80",
-    },
-    {
-      id: 3,
-      name: "후보 3",
-      promise: "귀여움과 활발함으로 잘어울리개를 대표해볼게요 ✨",
-      charm: ["활동성 최고", "애교 많음", "시선강탈 비주얼"],
-      image:
-        "https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=900&q=80",
-    },
-  ];
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>잘어울리개 반장선거</title>
 
-  return (
-    <div className="min-h-screen bg-[#f8f3ea] text-[#2c241b]">
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fff8ee] via-[#f8f3ea] to-[#f5ede1]" />
-        <div className="relative mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-4 inline-flex items-center rounded-full border border-[#eadcc2] bg-white/70 px-4 py-2 text-sm shadow-sm backdrop-blur">
-              <span className="mr-2">🐾</span>
-              잘어울리개 공식 반장 선거
-            </div>
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-              귀엽고, 특별한
-              <br />
-              <span className="text-[#b48a3a]">잘어울리개 반장선거</span>
-            </h1>
-            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-[#5b4c3a] sm:text-lg">
-              출마한 친구들만 참여하는 특별한 투표입니다. 후보를 살펴보고,
-              가장 반장과 잘 어울리는 친구에게 한 표를 보내주세요 💛
-            </p>
-
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="#candidates"
-                className="rounded-full bg-[#b48a3a] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#b48a3a]/20 transition hover:-translate-y-0.5"
-              >
-                후보 보러가기
-              </a>
-              <a
-                href="#vote"
-                className="rounded-full border border-[#d8c5a1] bg-white px-7 py-3 text-sm font-semibold text-[#6d5530] shadow-sm transition hover:-translate-y-0.5"
-              >
-                투표 방법 확인하기
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-5 pb-6 sm:px-8">
-        <div className="grid gap-4 md:grid-cols-3">
-          {[
-            ["후보 등록", "출마 신청 기간 동안 사진 1장과 한 줄 포부를 받아 후보를 확정합니다."],
-            ["후보 소개", "후보 카드에서 각 친구들의 매력과 포부를 천천히 확인해보세요."],
-            ["온라인 투표", "단톡방 링크 또는 QR로 접속해 온라인으로 반장 투표에 참여합니다."],
-          ].map(([title, desc]) => (
-            <div
-              key={title}
-              className="rounded-3xl border border-[#eadcc2] bg-white/80 p-5 shadow-sm"
-            >
-              <div className="mb-3 h-10 w-10 rounded-2xl bg-[#fff5df] text-center leading-10">
-                ✨
-              </div>
-              <h3 className="text-lg font-semibold">{title}</h3>
-              <p className="mt-2 text-sm leading-6 text-[#6b5b47]">{desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="candidates" className="mx-auto max-w-6xl px-5 py-10 sm:px-8 sm:py-14">
-        <div className="mb-8 flex items-end justify-between gap-4">
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b48a3a]">
-              Candidates
-            </p>
-            <h2 className="mt-2 text-3xl font-bold sm:text-4xl">반장 후보 소개</h2>
-          </div>
-          <div className="hidden rounded-2xl border border-[#eadcc2] bg-white px-4 py-2 text-sm text-[#6b5b47] md:block">
-            반장은 단 한 명만 선출됩니다
-          </div>
-        </div>
-
-        <div className="grid gap-6 lg:grid-cols-3">
-          {candidates.map((candidate) => (
-            <div
-              key={candidate.id}
-              className="overflow-hidden rounded-[28px] border border-[#eadcc2] bg-white shadow-[0_16px_50px_rgba(122,95,40,0.08)]"
-            >
-              <div className="aspect-[4/5] overflow-hidden">
-                <img
-                  src={candidate.image}
-                  alt={candidate.name}
-                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                />
-              </div>
-              <div className="p-6">
-                <div className="mb-3 inline-flex rounded-full bg-[#fff5df] px-3 py-1 text-xs font-semibold text-[#9a742d]">
-                  반장 후보 {candidate.id}
-                </div>
-                <h3 className="text-2xl font-bold">{candidate.name}</h3>
-                <p className="mt-3 text-sm leading-6 text-[#5e503f]">{candidate.promise}</p>
-
-                <div className="mt-5">
-                  <p className="mb-2 text-sm font-semibold text-[#7a6239]">매력 포인트</p>
-                  <div className="flex flex-wrap gap-2">
-                    {candidate.charm.map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-full border border-[#ecdcb8] bg-[#fffaf0] px-3 py-1 text-xs text-[#6f5a35]"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="vote" className="mx-auto max-w-6xl px-5 pb-16 sm:px-8 sm:pb-20">
-        <div className="rounded-[32px] border border-[#eadcc2] bg-white p-6 shadow-[0_16px_50px_rgba(122,95,40,0.08)] sm:p-10">
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#b48a3a]">
-                Voting Guide
-              </p>
-              <h2 className="mt-2 text-3xl font-bold sm:text-4xl">투표 안내</h2>
-              <div className="mt-6 space-y-4 text-sm leading-7 text-[#5e503f] sm:text-base">
-                <p>
-                  • 이번 반장선거는 <span className="font-semibold">온라인 투표</span>로 진행됩니다.
-                </p>
-                <p>
-                  • 매장에 방문하신 보호자님은 <span className="font-semibold">QR코드</span>를 통해 참여하실 수 있습니다.
-                </p>
-                <p>
-                  • 출마한 친구들의 보호자님만 투표에 참여하실 수 있습니다.
-                </p>
-                <p>
-                  • 반장으로 선출된 친구는 <span className="font-semibold">잘어울리개 공식 반장</span>으로 선정되며,
-                  특별 포스터 및 반장 기념 혜택이 제공됩니다.
-                </p>
-              </div>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center rounded-full bg-[#b48a3a] px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-[#b48a3a]/20"
-                >
-                  지금 투표하기 🐾
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center rounded-full border border-[#d8c5a1] bg-[#fffaf2] px-7 py-3 text-sm font-semibold text-[#6d5530]"
-                >
-                  단톡방 공지 보러가기
-                </a>
-              </div>
-            </div>
-
-            <div className="rounded-[28px] bg-[#fbf6ec] p-6">
-              <h3 className="text-xl font-bold">반장 혜택</h3>
-              <div className="mt-5 space-y-4">
-                {[
-                  "잘어울리개 공식 반장 포스터 게시",
-                  "반장 기념 사진 촬영 및 전달",
-                  "인스타그램 또는 매장 소개 게시",
-                  "반장 기념 특별 선물 또는 혜택 제공",
-                ].map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-2xl bg-white p-4 shadow-sm">
-                    <div className="mt-0.5 flex h-8 w-8 items-center justify-center rounded-full bg-[#fff0c9] text-sm">
-                      👑
-                    </div>
-                    <p className="text-sm leading-6 text-[#5e503f]">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+<style>
+body {
+  margin:0;
+  font-family: 'Arial';
+  background:#f8f3ea;
+  text-align:center;
 }
+
+h1 {
+  margin-top:30px;
+}
+
+.container {
+  max-width:800px;
+  margin:auto;
+}
+
+.card {
+  background:white;
+  margin:20px;
+  padding:20px;
+  border-radius:20px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+img {
+  width:100%;
+  border-radius:15px;
+}
+
+.btn {
+  display:inline-block;
+  background:#d4a937;
+  color:white;
+  padding:15px 30px;
+  border-radius:30px;
+  text-decoration:none;
+  margin:30px;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🐾 잘어울리개 반장선거 🐾</h1>
+
+<div class="container">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b">
+    <h2>후보 1</h2>
+    <p>친구들과 사이좋게 지낼게요 💛</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a">
+    <h2>후보 2</h2>
+    <p>밝은 분위기를 만들겠습니다 ✨</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1525253086316-d0c936c814f8">
+    <h2>후보 3</h2>
+    <p>귀여움으로 대표하겠습니다 🐶</p>
+  </div>
+
+</div>
+
+<a href="여기에_투표링크" class="btn">투표하기 🐾</a>
+
+</body>
+</html>
